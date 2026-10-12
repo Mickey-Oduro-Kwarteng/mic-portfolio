@@ -10,7 +10,7 @@ export const PROFILE = {
   first: "Mickey",
   name: "Mickey Oduro Kwarteng",
   intro:
-    "I'm a freelance UI/UX designer and developer based in London, England. I build immersive, beautiful web applications through carefully crafted code and user-centric design.",
+    "I'm a Software Engineer specializing in building scalable, modern, and user-friendly digital solutions. From responsive websites to robust backend systems and AI-powered applications, I help businesses and individuals turn ideas into impactful products.",
   address: "Darkuman, Accra, Ghana",
   email: "odurokwartengmickey@gmail.com",
   phone: "059-701-2977",
@@ -81,54 +81,29 @@ export const PROJECTS = [
   },
 ];
 
+export const MEDIUM_PROFILE = "https://medium.com/@yourname";
+
 export const POSTS = [
   {
-    date: "22 Oct 2025",
-    comments: 24,
-    title: "What a good design handoff actually includes",
-    cover: "linear-gradient(160deg,#1e1b4b 0%,#6d4fa8 50%,#0f172a 100%)",
+    title: "Biometrics is getting smarter apparently passwords werent enough",
+    url: "https://medium.com/@odurokwartengmickey/biometrics-is-getting-smarter-apparently-passwords-werent-enough-e1e097e5c2ce?sharedUserId=odurokwartengmickey",
+    date: "7 Oct 2025",
+    readTime: "5 min read",
+    image: "",
   },
   {
-    date: "8 Oct 2025",
-    comments: 12,
-    title: "Designing empty states that tell people what to do",
-    cover: "linear-gradient(160deg,#facc15 0%,#eab308 50%,#292524 100%)",
+    title: "Digital accounting shouldnt be a luxury for ghanaian smes",
+    url: "https://medium.com/@odurokwartengmickey/digital-accounting-shouldnt-be-a-luxury-for-ghanaian-smes-9e9048f3a389",
+    date: "20 Sep 2025",
+    readTime: "4 min read",
+    image: "",
   },
   {
-    date: "19 Sep 2025",
-    comments: 31,
-    title: "Choosing a color system you won't regret",
-    cover: "linear-gradient(160deg,#a3e635 0%,#ec4899 50%,#1e1b4b 100%)",
-  },
-  {
-    date: "2 Sep 2025",
-    comments: 9,
-    title: "Why I prototype in code earlier than I used to",
-    cover: "linear-gradient(160deg,#e0f2fe 0%,#7dd3fc 50%,#64748b 100%)",
-  },
-  {
-    date: "14 Aug 2025",
-    comments: 17,
-    title: "Running a five-person usability test in a day",
-    cover: "linear-gradient(160deg,#fecaca 0%,#f97316 60%,#7c2d12 100%)",
-  },
-  {
-    date: "30 Jul 2025",
-    comments: 6,
-    title: "Accessible forms: the checklist I use",
-    cover: "linear-gradient(160deg,#ccfbf1 0%,#14b8a6 55%,#134e4a 100%)",
-  },
-  {
-    date: "11 Jul 2025",
-    comments: 22,
-    title: "Pricing freelance design work without guessing",
-    cover: "linear-gradient(160deg,#ede9fe 0%,#a855f7 55%,#3b0764 100%)",
-  },
-  {
-    date: "25 Jun 2025",
-    comments: 14,
-    title: "Small motion, big clarity",
-    cover: "linear-gradient(160deg,#fef3c7 0%,#fb7185 55%,#4c0519 100%)",
+    title: "Digital accounting shouldnt be a luxury for ghanaian smes",
+    url: "https://medium.com/@odurokwartengmickey/square-didnt-just-build-a-card-reader-it-helped-build-the-infrastructure-of-modern-payments-37b385457895?sharedUserId=odurokwartengmickey",
+    date: "20 Sep 2025",
+    readTime: "4 min read",
+    image: "",
   },
 ];
 
@@ -138,7 +113,7 @@ export const SERVICES = [
     text: "Research, journeys, and information architecture that make products easy to understand and pleasant to use.",
   },
   {
-    title: "User interface (UI)",
+    title: "Mobile application Development",
     text: "Clean, consistent interfaces and design systems that scale from a landing page to a full product.",
   },
   {
@@ -151,7 +126,11 @@ export const SOCIALS = [
   { label: "Facebook", icon: FacebookIcon, href: "#" },
   { label: "Behance", icon: BehanceIcon, href: "#" },
   { label: "Instagram", icon: InstagramIcon, href: "#" },
-  { label: "LinkedIn", icon: LinkedinIcon, href: "#" },
+  {
+    label: "LinkedIn",
+    icon: LinkedinIcon,
+    href: "https://www.linkedin.com/in/mickey-oduro-kwarteng-515096263/",
+  },
 ];
 export const TECH = [
   {

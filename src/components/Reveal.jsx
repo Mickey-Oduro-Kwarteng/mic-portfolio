@@ -1,14 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Fades its content in and slides it up slightly the first time it scrolls into view.
+ * Fades its content in and slides it up slightly whenever it scrolls into view,
+ * and hides it again when it scrolls out, so it replays in both directions.
  *
- * <Reveal>...</Reveal>              — default fade-up
+ * <Reveal>...</Reveal>              — default fade-up, replays every time
+ * <Reveal once>...</Reveal>         — animate only the first time
  * <Reveal delay={150}>...</Reveal>  — start 150ms later (for staggering)
  *
  * People who turn on "reduce motion" in their OS settings see the content immediately.
  */
-export default function Reveal({ children, delay = 0, duration = 900, distance = 40, className = "" }) {
+export default function Reveal({
+  children,
+  once = false,
+  delay = 0,
+  duration = 900,
+  distance = 40,
+  className = "",
+}) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -16,7 +25,9 @@ export default function Reveal({ children, delay = 0, duration = 900, distance =
     const el = ref.current;
     if (!el) return;
 
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     if (reduceMotion || !("IntersectionObserver" in window)) {
       setVisible(true);
       return;
@@ -26,15 +37,17 @@ export default function Reveal({ children, delay = 0, duration = 900, distance =
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.disconnect(); // animate once only
+          if (once) observer.disconnect();
+        } else if (!once) {
+          setVisible(false); // hide again so it replays next time it comes into view
         }
       },
-      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" },
     );
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [once]);
 
   return (
     <div
