@@ -99,7 +99,8 @@ export const POSTS = [
     image: "",
   },
   {
-    title: "Digital accounting shouldnt be a luxury for ghanaian smes",
+    title:
+      "square didnt just build a card reader it helped build the infrastructure of modern payments",
     url: "https://medium.com/@odurokwartengmickey/square-didnt-just-build-a-card-reader-it-helped-build-the-infrastructure-of-modern-payments-37b385457895?sharedUserId=odurokwartengmickey",
     date: "20 Sep 2025",
     readTime: "4 min read",

@@ -145,7 +145,7 @@ export default function Blog() {
           )}
           {MEDIUM_PROFILE && (
             <a
-              href={MEDIUM_PROFILE}
+              href={"https://medium.com/@odurokwartengmickey"}
               target="_blank"
               rel="noopener noreferrer"
               className={`inline-flex items-center gap-2 rounded text-sm font-semibold text-purple-600 hover:text-purple-700 ${focusRing}`}
